@@ -32,94 +32,153 @@ This project implements a Retrieval-Augmented Generation (RAG) chatbot that answ
 
 ### Installation Steps
 
-1. **Clone the repository**
+# 🤖 RAG-Based PDF Chatbot – EBay User Agreement Assistant
+
+A Retrieval-Augmented Generation (RAG) based chatbot that allows users to query information from legal documents (like eBay User Agreement PDFs) using semantic search and response generation.
+
+---
+
+## ✅ Steps to Complete RAG-Based PDF Chatbot Project
+
+---
+
+### 1. 🔧 Install Required Libraries
+
+Install the necessary packages in your Python environment:
+
 ```bash
+pip install streamlit faiss-cpu sentence-transformers transformers nltk chromadb langchain pypdf2
+```
 
-🎛️ Model Choices & Rationale
-Embedding Model: all-MiniLM-L6-v2
+---
 
-Why: Balanced performance vs. speed, 384-dimensional vectors
-Alternatives considered: bge-small-en, all-mpnet-base-v2
-Performance: Good semantic understanding for legal text
+### 2. 📂 Create Folder Structure
 
-Language Model: microsoft/DialoGPT-medium
+```plaintext
+rag_chatbot_project/
+│
+├── data/                 # Raw PDFs and cleaned text
+├── embeddings/           # FAISS index and metadata storage
+├── src/                  # Core Python logic
+│   ├── preprocessing.py       # Data cleaning and chunking
+│   ├── embedder.py            # Embedding generation
+│   ├── retriever.py           # FAISS-based retriever
+│   ├── generator.py           # Response generation using DialoGPT
+│   └── pipeline.py            # Final end-to-end RAG pipeline
+├── app/                  # Streamlit app for user interface
+│   └── app.py
+├── pipeline.ipynb        # Jupyter Notebook for testing pipeline
+├── requirements.txt      # List of all required Python packages
+└── README.md             # Project overview and setup instructions
+```
 
-Why: Conversational fine-tuning, reasonable size (345M parameters)
-Alternatives considered: distilgpt2, llama-7b-instruct
-Trade-offs: Speed vs. generation quality
+---
 
-Vector Database: FAISS
+### 3. 🧹 Preprocessing Pipeline (`src/preprocessing.py`)
 
-Why: Fast similarity search, easy integration
-Configuration: IndexFlatIP for cosine similarity
-Scale: Efficient for documents up to 50,000 chunks
+- Import necessary libraries.
+- Extract text from PDF using `PyPDF2`.
+- Clean extracted text using regular expressions:
+  - Remove headers, footers, and unwanted symbols.
+- Perform intelligent chunking (e.g., sentence-based or overlapping).
+- Save cleaned and chunked data to JSON/CSV format in `data/`.
 
-Chunking Strategy
+---
 
-Method: Sentence-aware with overlap
-Size: 200-300 characters target
-Overlap: 2 sentences between chunks
-Rationale: Preserves context while maintaining searchability
+### 4. 🧠 Embedding and FAISS Setup (`src/embedder.py`)
 
-⚠️ Limitations & Future Improvements
-Current Limitations
+- Load cleaned text chunks.
+- Generate sentence embeddings using `all-MiniLM-L6-v2`.
+- Create FAISS vector store with metadata.
+- Save FAISS index and metadata to `embeddings/`.
 
-Response Quality: May generate generic responses for complex queries
-Context Window: Limited by model's sequence length (512 tokens)
-Legal Complexity: Simplified interpretation of complex legal language
-Hallucination Risk: Model may generate information not in sources
-Processing Speed: Response time varies with query complexity (2-5 seconds)
+---
 
-Failure Cases
+### 5. 🔍 Build Retrieval & Generation Pipeline
 
-Ambiguous Queries: "What should I do?" → Requires more specific context
-Cross-sectional Information: Questions spanning multiple policy areas
-Recent Updates: Information not in the training document
+#### A. `src/retriever.py`
+- Create a Retriever class that queries FAISS DB with user input and fetches top-k relevant chunks.
 
-Future Improvements
+#### B. `src/generator.py`
+- Load the `microsoft/DialoGPT-medium` model.
+- Generate conversational responses using the retrieved context.
 
-Model Upgrades: Implement larger models (Llama-2, Claude-instant)
-Advanced Chunking: Semantic-based chunking using embeddings
-Query Enhancement: Query expansion and reformulation
-Multi-modal Support: Handle images, tables in documents
-Evaluation Metrics: Implement BLEU, ROUGE, semantic similarity scores
-Caching: Response caching for common queries
-Fine-tuning: Domain-specific fine-tuning on legal text
+#### C. `src/pipeline.py`
+- Integrate retriever and generator classes.
+- Build an end-to-end `generate_response(query)` function.
 
-📊 Performance Metrics
-Based on test evaluation:
+---
 
-Success Rate: 95% (19/20 test queries)
-Average Response Time: 3.2 seconds
-Average Response Length: 45 words
-Source Grounding: 100% of responses include source references
-Relevance Score: High semantic similarity (>0.7) for retrieved chunks
+### 6. 🧪 Test the Pipeline (`pipeline.ipynb`)
 
-🤝 Contributing
+- Run sample queries.
+- Analyze:
+  - Retrieved context chunks.
+  - Generated responses.
+- Save results for documentation and refinement.
 
-Fork the repository
-Create a feature branch
-Make your changes
-Add tests
-Submit a pull request
+---
 
-📄 License
-This project is created for educational purposes as part of a technical assessment.
-🙏 Acknowledgments
+### 7. 🌐 Create Streamlit Interface (`app/app.py`)
 
-eBay for providing the User Agreement document
-Hugging Face for transformer models
-Sentence Transformers library
-Facebook AI Research for FAISS
-Streamlit for the web interface
+- Build the UI:
+  - Input textbox for user questions.
+  - Output box for answers.
+  - (Optional) Show retrieved context chunks or sources.
+- Load and use `pipeline.py` in the backend.
 
+Run using:
 
-git clone <your-repo-url>
-cd rag-chatbot
+```bash
+streamlit run app/app.py
+```
 
+---
 
-Step: Run the Application
-Start streamlit run  : streamlit.py
+### 8. 📦 Final Touches
 
-Step 7: Access the Chatbot
-Open your web browser and go to http://localhost: (or the port you specified) to interact with the chatbot.
+- Create `requirements.txt`:
+
+```bash
+pip freeze > requirements.txt
+```
+
+- Add `README.md` with:
+  - Project overview
+  - Tech stack
+  - Folder structure
+  - Usage instructions
+  - Screenshots and demo video (if any)
+
+- Add screenshots and video files to appropriate folders for better documentation.
+
+---
+
+### 9. 📤 Upload to GitHub
+
+- Create a new GitHub repository.
+- Push the entire folder structure: `src/`, `app/`, `data/`, `embeddings/`, `README.md`, `requirements.txt`.
+- Include screenshots and demo video links in README.
+
+---
+
+## 📌 Project Highlights
+
+- 🧠 Smart chunking and semantic embedding.
+- 🔍 Contextual retrieval using FAISS.
+- 💬 Natural conversational responses via DialoGPT.
+- 🌐 Simple user interface built with Streamlit.
+
+---
+
+## 📽 Demo & Screenshots
+
+Add your screenshots and screen recording (GIF/video) here for visual demo.
+
+---
+
+## 👨‍💻 Author
+
+**Bhaskar Dipakkumar Barot**  
+*AI Engineer | Data Scientist | Deep Learning Enthusiast*  
+🔗 [LinkedIn](https://www.linkedin.com/in/bhaskar-barot-9b2455252/) • 🌐 [Portfolio](https://bhaskarbarot.my.canva.site/)
