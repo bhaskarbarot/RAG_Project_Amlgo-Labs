@@ -116,3 +116,10 @@ Streamlit for the web interface
 
 git clone <your-repo-url>
 cd rag-chatbot
+
+
+Step: Run the Application
+Start streamlit run  : streamlit.py
+
+Step 7: Access the Chatbot
+Open your web browser and go to http://localhost: (or the port you specified) to interact with the chatbot.
