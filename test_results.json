@@ -1,0 +1,181 @@
+{
+  "test_metadata": {
+    "total_queries": 10,
+    "success_rate": 100.0,
+    "avg_response_time": 0.02051539421081543,
+    "avg_response_length": 10.0,
+    "test_date": "2025-07-30 09:49:38.503618"
+  },
+  "detailed_results": [
+    {
+      "query_id": 1,
+      "query": "What are eBay's return policies for buyers?",
+      "response": "Error generating response: PreTrainedTokenizerFast._batch_encode_plus() got an unexpected keyword argument 'truncate'",
+      "sources": [
+        "14. Additional Terms Returns and cancellations for sellers Sellers can create rules to automate replacements, returns, and refunds under certain circumstances. For all new sellers, in listings where returns are accepted, eBay will set a default rule that automates the return process.",
+        "Where settings have been set to automatically accept requests for returns or replacements, an eBay -generated return shipping label will be provided to your buyer. You agree to comply with our returns policy . When an item is returned or if a transaction is canceled after payment has been completed, eBay may issue a refund to the buyer on the seller's behalf and charge the seller for the amount of the refund.",
+        "For all new sellers, in listings where returns are accepted, eBay will set a default rule that automates the return process. Sellers may remove or customiz e their return preferences in their account settings within My eBay."
+      ],
+      "response_time": 0.05627083778381348,
+      "response_length": 117,
+      "response_words": 10,
+      "num_sources": 3,
+      "success": true,
+      "grounded": true,
+      "avg_source_length": 306.6666666666667
+    },
+    {
+      "query_id": 2,
+      "query": "How much fees does eBay charge sellers?",
+      "response": "Error generating response: PreTrainedTokenizerFast._batch_encode_plus() got an unexpected keyword argument 'truncate'",
+      "sources": [
+        "Also, as provided below in the Fees and Taxes section, if we believe you are violating our policy on buying or selling outside of eBay , you may be charged final value fees.",
+        "If you are a seller, you are liable for fees arising out of all sales made using some or all of our Services, even if sales terms are finalized or payment is made outside of eBay.",
+        "6. Fees and Costs Payment of all filing, administration, and arbitrator fees will be governed by the applicable NAM fee schedules (the \"Fee Schedules\"), but may be reapportioned between the parties in accordance with this Agreement to Arbitrate, as follows: if you complied with the Informal Dispute Resolution requirements in Section 1 of this Agreement and the value of the relief sought in the Dispute is 10,000 or less, at your request eBay will pay all filing, administration, and arbitrator fees associated w ith the arbitration. The parties shall bear their own attorneys fees and costs in arbitration unless the arbitrator finds that either the substance of the Dispute or the relief sought in the Demand was frivolous or was brought for an improper purpose (as measured by the standards set forth in Federal Rule of Civil Procedure 11(b))."
+      ],
+      "response_time": 0.03628683090209961,
+      "response_length": 117,
+      "response_words": 10,
+      "num_sources": 3,
+      "success": true,
+      "grounded": true,
+      "avg_source_length": 400.0
+    },
+    {
+      "query_id": 3,
+      "query": "Can I cancel my order after purchasing?",
+      "response": "Error generating response: PreTrainedTokenizerFast._batch_encode_plus() got an unexpected keyword argument 'truncate'",
+      "sources": [
+        "All seller cancellations of orders must be in accordance with our Order cancellation policy . Returns and cancellations for buyers Buyers generally do not have the right to cancel an order. Buyers can request to cancel an order on eBay within the time period and as provided in our Order cancellation policy , and the seller will have 3 days to accept or decline the request.",
+        "Returns and cancellations for buyers Buyers generally do not have the right to cancel an order. Buyers can request to cancel an order on eBay within the time period and as provided in our Order cancellation policy , and the seller will have 3 days to accept or decline the request. If the order cannot be canceled, buyers may still be permitted to return the item if the item is eligible for return .",
+        "Buyers can request to cancel an order on eBay within the time period and as provided in our Order cancellation policy , and the seller will have 3 days to accept or decline the request. If the order cannot be canceled, buyers may still be permitted to return the item if the item is eligible for return . In certain instances, a buyer may be responsible for the cost of return shipping for an item returned to a seller."
+      ],
+      "response_time": 0.02915477752685547,
+      "response_length": 117,
+      "response_words": 10,
+      "num_sources": 3,
+      "success": true,
+      "grounded": true,
+      "avg_source_length": 398.0
+    },
+    {
+      "query_id": 4,
+      "query": "What happens if I violate eBay's user agreement?",
+      "response": "Error generating response: PreTrainedTokenizerFast._batch_encode_plus() got an unexpected keyword argument 'truncate'",
+      "sources": [
+        "We do not guarantee we will take action against all breaches of this User Agreement. We may amend this User Agreement at any time by posting the amended terms on www.eBay.com. Our right to amend the User Agreement includes the right to modify, add to, or remove terms in the User Agreement.",
+        "We may also ask you to acknowledge your acceptance of the User Agreement through an electronic click -through. This User Agreement may not otherwise be amended except through mutual agreement by you and an eBay representative who intends to amend this User Agreement and is duly authorized to agree to such an amendment. Without limiting eBay's ability to refuse, modify, or terminate all or part of our Services, eBay may also terminate this Agreement with anyone at any time for any reason, at our sole discretion, by giving notice of such termination.",
+        "Our failure to act with respect to a breach by you or others does not waive our right to act with respect to subsequent or similar breaches. We do not guarantee we will take action against all breaches of this User Agreement. We may amend this User Agreement at any time by posting the amended terms on www.eBay.com."
+      ],
+      "response_time": 0.013427495956420898,
+      "response_length": 117,
+      "response_words": 10,
+      "num_sources": 3,
+      "success": true,
+      "grounded": true,
+      "avg_source_length": 386.6666666666667
+    },
+    {
+      "query_id": 5,
+      "query": "How does eBay handle disputes between buyers and sellers?",
+      "response": "Error generating response: PreTrainedTokenizerFast._batch_encode_plus() got an unexpected keyword argument 'truncate'",
+      "sources": [
+        "For purposes of this Agreement to Arbitrate, \"Dispute\" will also include disputes that arose or involve facts occurring before the existence of this or any prior versions of the User Agreement as well as claims that may arise after the termination of this User Agreement, unless those disputes were noticed prior to this User Agreement. 1. Informal Dispute Resolution If a Dispute arises between you and eBay, eBay is committed to working with you to reach a prompt, low-cost and mutually reasonable resolution. You and eBay agree to participate in good faith informal efforts to resolve Disputes before starting an arbitrati on or initiating an action in small claims court (\"Informal Dispute Resolution\").",
+        "The exceptions to this Agreement to Arbitrate are: (1) you or eBay may seek relief in small claims court if such claims qualify and remain in small claims court; and (2) you or eBay may seek equitable relief in court for infringement or other misuse of intellectual property rights (such as trademarks, trade dress, domain names, trade secrets, copyrights, and patents). For purposes of this Agreement to Arbitrate, \"Dispute\" will also include disputes that arose or involve facts occurring before the existence of this or any prior versions of the User Agreement as well as claims that may arise after the termination of this User Agreement, unless those disputes were noticed prior to this User Agreement. 1. Informal Dispute Resolution If a Dispute arises between you and eBay, eBay is committed to working with you to reach a prompt, low-cost and mutually reasonable resolution.",
+        "1. Informal Dispute Resolution If a Dispute arises between you and eBay, eBay is committed to working with you to reach a prompt, low-cost and mutually reasonable resolution. You and eBay agree to participate in good faith informal efforts to resolve Disputes before starting an arbitrati on or initiating an action in small claims court (\"Informal Dispute Resolution\"). To initiate Informal Dispute Resolution, a party must give notice to the other party in writing in a valid Notice of Dispute (\"Notice\"), which may be downloaded at this link ."
+      ],
+      "response_time": 0.013646602630615234,
+      "response_length": 117,
+      "response_words": 10,
+      "num_sources": 3,
+      "success": true,
+      "grounded": true,
+      "avg_source_length": 711.6666666666666
+    },
+    {
+      "query_id": 6,
+      "query": "What information does eBay collect from users?",
+      "response": "Error generating response: PreTrainedTokenizerFast._batch_encode_plus() got an unexpected keyword argument 'truncate'",
+      "sources": [
+        "eBay may store message contents, including to conduct this scanning and analysis. Privacy of Others; Marketing If eBay provides you with information about another user, you agree you will use the information only for the purposes that it is provided to you. You may not disclose or distribute a user's information to a third party for purposes unrelated to our Servic es.",
+        "We offer product data (including images, descriptions and specifications) that are provided by third parties (including eBay users). You may use that content solely in your eBay listings. eBay may modify or revoke such permission at any time in our sole di scretion.",
+        "Authorization to Contact You; Recording Calls; Analyzing Message Content eBay may contact you using autodialed or prerecorded calls and text messages, at any telephone number that you have provided us, to: (i) notify you regarding your account; (ii) troubleshoot problems with your account; (iii) resolve a dispute; (iv) collect a debt; (v) poll your opinions through surveys or questionnaires; or (vi) as otherwise necessary to service your account or enforce this User Agreement, our policies, applicable law, or any other agreement we may have with you. eBay may also contact you us ing autodialed or prerecorded calls and text messages for marketing purposes (e.g, offers and promotions), if you consent to such communications. Our collection, use, disclosure, retention, and protection of your personal information is governed by our User Privacy Notice ."
+      ],
+      "response_time": 0.011967897415161133,
+      "response_length": 117,
+      "response_words": 10,
+      "num_sources": 3,
+      "success": true,
+      "grounded": true,
+      "avg_source_length": 499.0
+    },
+    {
+      "query_id": 7,
+      "query": "Are there any restrictions on what I can sell?",
+      "response": "Error generating response: PreTrainedTokenizerFast._batch_encode_plus() got an unexpected keyword argument 'truncate'",
+      "sources": [
+        "If we believe you are violating our policies prohibiting Offers to buy or sell outside of eBay , you may be subject to a range of actions, including limits on your buying and selling privileges, restrictions on listings and account features, suspension of your account, application of fees, and recovery of expenses for policy monitoring and enforceme nt.",
+        "For example, for inventory covered by authentication or storage services, buyer and sellers may be subject to escrow andor payment handling requirements;  You will not sell and will promptly remove all listings for any product recalled by a manufacturer or governmental agency if the sale of the product is prohibited by law or regulation or if the product poses a health or safety hazard as specified by any go vernmental agency.",
+        "12. Holds and Restricted Funds To protect eBay from risk of liability for your actions as a seller, eBay Payments Entities (as defined below) may restrict access to your funds as described in the Payments Terms of Use . 13."
+      ],
+      "response_time": 0.010460376739501953,
+      "response_length": 117,
+      "response_words": 10,
+      "num_sources": 3,
+      "success": true,
+      "grounded": true,
+      "avg_source_length": 336.0
+    },
+    {
+      "query_id": 8,
+      "query": "What is eBay's policy on intellectual property?",
+      "response": "Error generating response: PreTrainedTokenizerFast._batch_encode_plus() got an unexpected keyword argument 'truncate'",
+      "sources": [
+        "To the fullest extent permitted under applicable law, you waive your right to enforce your Intellectual Property Rights, including any moral rights, in that content against eBay, our assignees, our sublicensees, and their assignees in connection with our, those assignees', and those subl icensees' use of that content in connection with our provision, expansion, and promotion of our Services. You represent and warrant that, for all such content you provide, you own or otherwise control all necessary rights to do so and to meet your obligations under this User Agreement. You represent and warrant that such content is accurate, appropriate, and l egal.",
+        "You represent and warrant that use of any such content (including derivative works) by us, our users, or others in contract with us, and in compliance with this User Agreement, does not and will not infringe any Intellectual Property Rights of any th ird party. eBay takes no responsibility and assumes no liability for any content provided by you or any third party. We offer product data (including images, descriptions and specifications) that are provided by third parties (including eBay users).",
+        "You represent and warrant that such content is accurate, appropriate, and l egal. You represent and warrant that use of any such content (including derivative works) by us, our users, or others in contract with us, and in compliance with this User Agreement, does not and will not infringe any Intellectual Property Rights of any th ird party. eBay takes no responsibility and assumes no liability for any content provided by you or any third party."
+      ],
+      "response_time": 0.011696100234985352,
+      "response_length": 117,
+      "response_words": 10,
+      "num_sources": 3,
+      "success": true,
+      "grounded": true,
+      "avg_source_length": 535.3333333333334
+    },
+    {
+      "query_id": 9,
+      "query": "How does eBay's arbitration process work?",
+      "response": "Error generating response: PreTrainedTokenizerFast._batch_encode_plus() got an unexpected keyword argument 'truncate'",
+      "sources": [
+        "You and eBay agree that at least 14 days before the date set for an arbitration hearing, any party may serve an offer in writing upon the other party to allow judgment on specified terms. If the offer made by one party is not accepted by the other party, and the other party fails to obtain a more favorable award, the other party shall not recover any po st-offer costs to which they otherwise would be entitled and shall pay the offering partys costs from the time of the offer. The parties agree that the arbitrator will decide the substance of all claims in accordance with applicable law, including recognized principles of equity, and will honor all claims of privilege recognized by law.",
+        "You and eBay agree that all materials and documents exchanged during the arbitration proceedings shall be kept confidential and shall not be shared with anyone except the parties attorneys, accountants, or business ad visors, and shall be subject to the condition that they agree to keep all materials and documents exchanged during the arbitration proceedings confidential. You and eBay agree that at least 14 days before the date set for an arbitration hearing, any party may serve an offer in writing upon the other party to allow judgment on specified terms. If the offer made by one party is not accepted by the other party, and the other party fails to obtain a more favorable award, the other party shall not recover any po st-offer costs to which they otherwise would be entitled and shall pay the offering partys costs from the time of the offer.",
+        "The Administrative Arbitrators fees shall be paid by eBay. You and eBay agree to cooperate in good faith with NAM to implement the Batch Arbitration process including the payment of single filing and administrative fees for batches of Demands, as well as any steps to minimize the time and costs of arbitration, whi ch may include: (1) the appointment of a discovery special master to as sist the arbitrator in the resolution of discovery disputes; and (2) the adoption of an expedited calendar of the arbitration proceedings. This Batch Arbitration provision shall in no way be interpreted as authorizing a class, collective andor representati ve arbitration or action of any kind, except as expressly set forth in this provision, and nothing about the Batch Arbitration process will preclude any party from participating in any arbitration administered according to that process."
+      ],
+      "response_time": 0.011647939682006836,
+      "response_length": 117,
+      "response_words": 10,
+      "num_sources": 3,
+      "success": true,
+      "grounded": true,
+      "avg_source_length": 810.0
+    },
+    {
+      "query_id": 10,
+      "query": "What are the payment terms for sellers?",
+      "response": "Error generating response: PreTrainedTokenizerFast._batch_encode_plus() got an unexpected keyword argument 'truncate'",
+      "sources": [
+        "15. Payment Services Payments for goods and services sold using our Services are facilitated by designated eBay entities (each, an \"eBay Payment Entity\") pursuant to the Payments Terms of Use . You agree to the Payments Terms of Use to the extent applicable to you.",
+        "You understand that some third parties, suc h as credit and debit card issuers, credit and debit card networks and payments services providers, may have their own terms and conditions for the payment or settlement methods you choose to use in connection with managed payments transactions. Failure to abide by third -party terms and conditions may result in fees assessed to you (for example, currency conversion fees from your credit card issuer if the transaction currency is different from your credit card currency) or other actions taken by such third parties, and you agree that the eBay Payment Entity has no control over, or responsibility or liabili ty for, such fees or actions. 16.",
+        "You agree to the Payments Terms of Use to the extent applicable to you. To receive payment for an item sold using our Services, you must accept and comply with the Payments Terms of Use , including the requirements to provide to eBay Payment Entities information about you, your business, and the financial account you will use to receive payments. If you are a buyer:  You may pay for items and services using the payment methods that the eBay Payment Entities make available, and the eBay Payment Entities will manage settlement of the payment to sellers."
+      ],
+      "response_time": 0.010595083236694336,
+      "response_length": 117,
+      "response_words": 10,
+      "num_sources": 3,
+      "success": true,
+      "grounded": true,
+      "avg_source_length": 504.6666666666667
+    }
+  ]
+}
