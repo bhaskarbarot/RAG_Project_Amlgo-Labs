@@ -1,114 +1,150 @@
-✅ Steps to Complete RAG-Based PDF Chatbot Project
-1. 🔧 Install Required Libraries
-Install all necessary packages in your Python environment (preferably using VS Code):
+# 🤖 RAG-Based PDF Chatbot – EBay User Agreement Assistant
 
-bash
-Copy
-Edit
+A Retrieval-Augmented Generation (RAG) based chatbot that allows users to query information from legal documents (like eBay User Agreement PDFs) using semantic search and response generation.
+
+---
+
+## ✅ Steps to Complete RAG-Based PDF Chatbot Project
+
+---
+
+### 1. 🔧 Install Required Libraries
+
+Install the necessary packages in your Python environment:
+
+```bash
 pip install streamlit faiss-cpu sentence-transformers transformers nltk chromadb langchain pypdf2
-2. 📂 Create Folder Structure
-graphql
-Copy
-Edit
+```
+
+---
+
+### 2. 📂 Create Folder Structure
+
+```plaintext
 rag_chatbot_project/
 │
-├── data/                 # Contains raw PDFs and cleaned text
-├── embeddings/           # Stores FAISS index and metadata
-├── src/                  # All core Python modules
-│   ├── preprocessing.py
-│   ├── embedder.py
-│   ├── retriever.py
-│   ├── generator.py
-│   └── pipeline.py
-├── app/                  # Streamlit app
+├── data/                 # Raw PDFs and cleaned text
+├── embeddings/           # FAISS index and metadata storage
+├── src/                  # Core Python logic
+│   ├── preprocessing.py       # Data cleaning and chunking
+│   ├── embedder.py            # Embedding generation
+│   ├── retriever.py           # FAISS-based retriever
+│   ├── generator.py           # Response generation using DialoGPT
+│   └── pipeline.py            # Final end-to-end RAG pipeline
+├── app/                  # Streamlit app for user interface
 │   └── app.py
-├── pipeline.ipynb        # Notebook to test pipeline
-├── requirements.txt
-└── README.md
-3. 🧹 Preprocessing Pipeline (src/preprocessing.py)
-Import necessary libraries.
+├── pipeline.ipynb        # Jupyter Notebook for testing pipeline
+├── requirements.txt      # List of all required Python packages
+└── README.md             # Project overview and setup instructions
+```
 
-Load and extract raw text from PDF using PyPDF2.
+---
 
-Clean text using Regular Expressions:
+### 3. 🧹 Preprocessing Pipeline (`src/preprocessing.py`)
 
-Remove headers, footers, and special characters.
+- Import necessary libraries.
+- Extract text from PDF using `PyPDF2`.
+- Clean extracted text using regular expressions:
+  - Remove headers, footers, and unwanted symbols.
+- Perform intelligent chunking (e.g., sentence-based or overlapping).
+- Save cleaned and chunked data to JSON/CSV format in `data/`.
 
-Perform intelligent chunking (overlap or sentence-based).
+---
 
-Save processed chunks in a metadata structure (JSON or CSV).
+### 4. 🧠 Embedding and FAISS Setup (`src/embedder.py`)
 
-4. 🧠 Embedding and FAISS Setup (src/embedder.py)
-Load processed chunks.
+- Load cleaned text chunks.
+- Generate sentence embeddings using `all-MiniLM-L6-v2`.
+- Create FAISS vector store with metadata.
+- Save FAISS index and metadata to `embeddings/`.
 
-Generate sentence embeddings using:
+---
 
-Model: all-MiniLM-L6-v2 from sentence-transformers.
+### 5. 🔍 Build Retrieval & Generation Pipeline
 
-Create a FAISS vector store with metadata.
+#### A. `src/retriever.py`
+- Create a Retriever class that queries FAISS DB with user input and fetches top-k relevant chunks.
 
-Save FAISS index and metadata to embeddings/.
+#### B. `src/generator.py`
+- Load the `microsoft/DialoGPT-medium` model.
+- Generate conversational responses using the retrieved context.
 
-5. 🔍 Build Retrieval & Generation Pipeline
-A. src/retriever.py
-Create a Retriever class that queries FAISS DB with user input and fetches top-k relevant chunks.
+#### C. `src/pipeline.py`
+- Integrate retriever and generator classes.
+- Build an end-to-end `generate_response(query)` function.
 
-B. src/generator.py
-Load microsoft/DialoGPT-medium.
+---
 
-Generate conversational responses using context retrieved by Retriever.
+### 6. 🧪 Test the Pipeline (`pipeline.ipynb`)
 
-C. src/pipeline.py
-Integrate retriever and generator classes.
+- Run sample queries.
+- Analyze:
+  - Retrieved context chunks.
+  - Generated responses.
+- Save results for documentation and refinement.
 
-Build an end-to-end function generate_response(query).
+---
 
-6. 🧪 Test the Pipeline (pipeline.ipynb)
-Run sample queries.
+### 7. 🌐 Create Streamlit Interface (`app/app.py`)
 
-Log and analyze:
+- Build the UI:
+  - Input textbox for user questions.
+  - Output box for answers.
+  - (Optional) Show retrieved context chunks or sources.
+- Load and use `pipeline.py` in the backend.
 
-Retrieved context chunks.
+Run using:
 
-Generated response.
-
-Save sample outputs for documentation.
-
-7. 🌐 Create Streamlit Interface (app/app.py)
-Design user interface:
-
-Input textbox for questions.
-
-Output display for answers.
-
-(Optional) show retrieved chunks or sources.
-
-Load pipeline.py in backend.
-
-Run with:
-
-bash
-Copy
-Edit
+```bash
 streamlit run app/app.py
-8. 📦 Final Touches
-Create requirements.txt:
+```
 
-bash
-Copy
-Edit
+---
+
+### 8. 📦 Final Touches
+
+- Create `requirements.txt`:
+
+```bash
 pip freeze > requirements.txt
-Add README.md:
+```
 
-Project overview, tech stack, setup, screenshots, demo video.
+- Add `README.md` with:
+  - Project overview
+  - Tech stack
+  - Folder structure
+  - Usage instructions
+  - Screenshots and demo video (if any)
 
-Add screenshots and demo video in appropriate folders.
+- Add screenshots and video files to appropriate folders for better documentation.
 
-Push all files to GitHub.
+---
 
-9. 📤 Upload to GitHub
-Create a new GitHub repository.
+### 9. 📤 Upload to GitHub
 
-Push project folders: src/, app/, data/, embeddings/, README.md, and requirements.txt.
+- Create a new GitHub repository.
+- Push the entire folder structure: `src/`, `app/`, `data/`, `embeddings/`, `README.md`, `requirements.txt`.
+- Include screenshots and demo video links in README.
 
-Add a video demo and screenshots.
+---
+
+## 📌 Project Highlights
+
+- 🧠 Smart chunking and semantic embedding.
+- 🔍 Contextual retrieval using FAISS.
+- 💬 Natural conversational responses via DialoGPT.
+- 🌐 Simple user interface built with Streamlit.
+
+---
+
+## 📽 Demo & Screenshots
+
+Add your screenshots and screen recording (GIF/video) here for visual demo.
+
+---
+
+## 👨‍💻 Author
+
+**Bhaskar Dipakkumar Barot**  
+*AI Engineer | Data Scientist | Deep Learning Enthusiast*  
+🔗 [LinkedIn](https://www.linkedin.com/in/bhaskar-barot-9b2455252/) • 🌐 [Portfolio](https://bhaskarbarot.my.canva.site/)
