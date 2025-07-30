@@ -1,0 +1,15 @@
+Sample Queries & Responses
+Query 1: "What are eBay's return policies?"
+Response: "Based on the eBay User Agreement, return policies vary by seller and item type. For new sellers, eBay automatically sets a default rule that automates the return process in listings where returns are accepted..."
+Sources Used: 3 chunks from sections 14 (Returns and cancellations)
+Query 2: "How much fees does eBay charge sellers?"
+Response: "eBay charges sellers various fees for using their services. The specific fees are listed on eBay's Selling fees pages and may change from time to time with 14 days advance notice..."
+Sources Used: 2 chunks from section 6 (Fees and Taxes)
+Query 3: "Can I cancel my order after purchasing?"
+Response: "According to eBay's policy, buyers generally do not have the right to cancel an order. However, buyers can request to cancel an order within the specified time period..."
+Sources Used: 2 chunks from section 14 (Returns and cancellations for buyers)
+Query 4: "What happens if I violate eBay's user agreement?"
+Response: "If eBay believes you are violating the User Agreement or policies, they may take several actions including limiting, suspending, or terminating your account, removing hosted content..."
+Sources Used: 3 chunks from section 3 (Using eBay)
+Query 5: "How does eBay handle disputes between buyers and sellers?"
+Response: "eBay provides several mechanisms for dispute resolution, including the eBay Money Back Guarantee program and various dispute resolution programs to help facilitate resolution between buyers and sellers..."
