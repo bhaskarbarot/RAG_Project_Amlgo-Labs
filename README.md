@@ -1,5 +1,5 @@
 # RAG_Project_Amlgo-Labs
-# eBay User Agreement RAG Chatbot
+# User Agreement RAG Chatbot
 
 ## 🎯 Project Overview
 
